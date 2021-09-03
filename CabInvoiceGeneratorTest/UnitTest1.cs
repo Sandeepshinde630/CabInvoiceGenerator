@@ -11,7 +11,7 @@ namespace CabInvoiceGeneratorTest
         {
         }
 
-        // Step 1
+        // Step 1 Calculate Fare
         [Test]
         public void GivenDistanceAndTimeShouldReturnTotalFare()
         {
@@ -23,7 +23,7 @@ namespace CabInvoiceGeneratorTest
             Assert.AreEqual(expected, fare);
         }
 
-        //step 2
+        // Step 2 Mutiple Rides
         [Test]
         public void GivenMultipleRideShouldReturnInvoiceSummary()
         {
@@ -34,7 +34,7 @@ namespace CabInvoiceGeneratorTest
             Assert.AreEqual(expectedSummary.GetType(), summary.GetType());
         }
 
-        //Step 3
+        // Step 3 Enhanced Invoice
         [Test]
         public void GivenMutipleEnhancedInvoiceShouldReturnTotalRidesTotalFareAverageFarePerRide()
         {
@@ -45,7 +45,7 @@ namespace CabInvoiceGeneratorTest
             Assert.AreEqual(expectedEnhancedSummary, enhancedSummary);
         }
 
-        //Step 4
+        // Step 4 Premimum Rides
         [Test]
         public void GivenDistanceAndTimeForPremiumShouldReturnTotalFare()
         {
